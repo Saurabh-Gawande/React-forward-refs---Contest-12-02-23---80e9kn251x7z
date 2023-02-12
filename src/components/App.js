@@ -3,9 +3,16 @@ import '../styles/App.css';
 import InputField from './InputField.js';
 const App = () => {
  
-//code here 
+const newRef = useRef(null);
+const [values , setvalues] = useState("");
 
+function settingValue(){
+setvalues(newRef.current.value);
+}
 
+function focusInput(){
+  newRef.current.focus();
+}
  
   return (
     <div>
